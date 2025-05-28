@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: |
           pacman -Sy --noconfirm mingw-w64-x86_64-uv mingw-w64-x86_64-gcc \
-            mingw-w64-x86_64-wget mingw-w64-make tar lzip
+            mingw-w64-x86_64-wget lzip
       - name: Build
         run: |
           uv build --wheel

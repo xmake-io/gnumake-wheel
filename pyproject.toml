@@ -15,11 +15,16 @@ build-frontend = "build[uv]"
 
 [[tool.cibuildwheel.overrides]]
 select = ["*-manylinux_*"]
-before-all = "yum install -y lzip"
+before-all = "yum install -y wget lzip"
 
 [[tool.cibuildwheel.overrides]]
 select = ["*-musllinux_*"]
-before-all = "apk add lzip"
+before-all = "apk add wget lzip"
+
+[[tool.cibuildwheel.overrides]]
+select = ["*-macosx_*"]
+# AssertionError: uv not found
+before-all = "brew install uv"
 
 # https://github.com/astral-sh/uv/issues/10260
 [[tool.cibuildwheel.overrides]]
