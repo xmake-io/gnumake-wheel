@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+version=4.4.1
+if [ ! -d make-$version ]; then
+  if [ ! -f make-$version.tar.lz ]; then
+    wget https://ftp.gnu.org/gnu/make/make-$version.tar.lz
+  fi
+  tar vxaf make-$version.tar.lz
+fi
+make-$version/configure "$@"

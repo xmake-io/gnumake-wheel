@@ -1,0 +1,27 @@
+[build-system]
+requires = ["xmake-python"]
+build-backend = "xmake_python"
+
+[project]
+name = 'gnumake'
+version = '4.4.1'
+description = "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files."
+readme = 'README.md'
+
+[tool.cibuildwheel]
+archs = ["all"]
+build = "*312-*"
+build-frontend = "build[uv]"
+
+[[tool.cibuildwheel.overrides]]
+select = ["*-manylinux_*"]
+before-all = "yum install -y lzip"
+
+[[tool.cibuildwheel.overrides]]
+select = ["*-musllinux_*"]
+before-all = "apk add lzip"
+
+# https://github.com/astral-sh/uv/issues/10260
+[[tool.cibuildwheel.overrides]]
+select = ["*-musllinux_s390x", "*-musllinux_ppc64*"]
+build-frontend = "build"
