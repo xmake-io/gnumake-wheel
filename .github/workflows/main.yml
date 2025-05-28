@@ -18,6 +18,7 @@ env:
   files: dist/*
   python-version: 3.x
   cache: pip
+  PYTHONUTF8: 1
 
 jobs:
   # windows doesn't use cibuildwheel
