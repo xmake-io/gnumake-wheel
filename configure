@@ -4,6 +4,6 @@ if [ ! -d make-$version ]; then
   if [ ! -f make-$version.tar.gz ]; then
     wget https://ftp.gnu.org/gnu/make/make-$version.tar.gz
   fi
-  tar vxzf make-$version.tar.gz
+  tar xzf make-$version.tar.gz
 fi
-make-$version/configure --disable-dependency-tracking "$@"
+make-$version/configure "$@"

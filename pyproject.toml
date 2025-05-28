@@ -11,6 +11,7 @@ readme = 'README.md'
 [tool.cibuildwheel]
 archs = ["all"]
 build = "*312-*"
+skip = "*-macosx_x86_64 *-universal2"
 build-frontend = "build[uv]"
 
 [[tool.cibuildwheel.overrides]]
