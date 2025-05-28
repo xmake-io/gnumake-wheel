@@ -6,4 +6,4 @@ if [ ! -d make-$version ]; then
   fi
   tar xzf make-$version.tar.gz
 fi
-make-$version/configure "$@"
+make-$version/configure --disable-dependency-tracking "$@"
