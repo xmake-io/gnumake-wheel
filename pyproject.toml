@@ -15,11 +15,11 @@ build-frontend = "build[uv]"
 
 [[tool.cibuildwheel.overrides]]
 select = ["*-manylinux_*"]
-before-all = "yum install -y wget lzip"
+before-all = "yum install -y wget gzip"
 
 [[tool.cibuildwheel.overrides]]
 select = ["*-musllinux_*"]
-before-all = "apk add wget lzip"
+before-all = "apk add wget gzip"
 
 [[tool.cibuildwheel.overrides]]
 select = ["*-macosx_*"]
