@@ -79,18 +79,6 @@ skip = "*-macosx_x86_64 *_universal2"
 build-frontend = "build[uv]"
 
 [[tool.cibuildwheel.overrides]]
-select = ["*-manylinux_*"]
-before-all = "yum install -y wget gzip"
-
-[[tool.cibuildwheel.overrides]]
-select = ["*-manylinux_s390x"]
-before-all = "apt-get -y install wget gzip"
-
-[[tool.cibuildwheel.overrides]]
-select = ["*-musllinux_*"]
-before-all = "apk add wget gzip"
-
-[[tool.cibuildwheel.overrides]]
 select = ["*-macosx_*"]
 # AssertionError: uv not found
 before-all = "brew install uv"
