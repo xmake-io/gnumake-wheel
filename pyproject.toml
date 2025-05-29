@@ -7,6 +7,70 @@ name = 'gnumake'
 version = '4.4.1'
 description = "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files."
 readme = 'README.md'
+keywords = ["make"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[[project.authors]]
+name = "Paul D. Smith"
+email = "psmith@gnu.org"
+
+[[project.authors]]
+name = "Dmitry Goncharov"
+email = "dgoncharov@users.sf.net"
+
+[[project.authors]]
+name = "Boris Kolpackov"
+email = "boris@kolpackov.net"
+
+[[project.authors]]
+name = "Roland McGrath"
+email = "roland@gnu.org"
+
+[[project.authors]]
+name = "Richard M. Stallman"
+email = "rms@gnu.org"
+
+[[project.authors]]
+name = "Roland McGrath"
+email = "roland@gnu.org"
+
+[[project.authors]]
+name = "Bob Chassell"
+email = "bob@gnu.org"
+
+[[project.authors]]
+name = "Melissa Weisshaus"
+email = "melissa@gnu.org"
+
+[[project.authors]]
+name = "Paul D. Smith"
+email = "psmith@gnu.org"
+
+[project.license]
+text = "GPL v3"
+
+[project.urls]
+Homepage = "https://www.gnu.org/software/make/"
+Download = "https://github.com/xmake-io/gnumake-wheel/releases"
+"Bug Report" = "https://github.com/xmake-io/gnumake-wheel/issues"
+Source = "https://github.com/xmake-io/gnumake-wheel"
+
 
 [tool.cibuildwheel]
 archs = ["all"]
