@@ -83,6 +83,10 @@ select = ["*-manylinux_*"]
 before-all = "yum install -y wget gzip"
 
 [[tool.cibuildwheel.overrides]]
+select = ["*-manylinux_s390x"]
+before-all = "apt-get -y install wget gzip"
+
+[[tool.cibuildwheel.overrides]]
 select = ["*-musllinux_*"]
 before-all = "apk add wget gzip"
 
