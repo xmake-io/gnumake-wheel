@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
+set -e
+wd=$PWD
+cd "$(dirname "$(readlink -f "$0")")"
+project=$PWD
+
 version=4.4.1
 if [ ! -d make-$version ]; then
   if [ ! -f make-$version.tar.gz ]; then
@@ -6,4 +11,6 @@ if [ ! -d make-$version ]; then
   fi
   tar xzf make-$version.tar.gz
 fi
-make-$version/configure --disable-dependency-tracking "$@"
+
+cd $wd
+$project/make-$version/configure --disable-dependency-tracking "$@"
