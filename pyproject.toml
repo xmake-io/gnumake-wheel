@@ -1,5 +1,5 @@
 [build-system]
-requires = ["xmake-python"]
+requires = ["xmake-python >= 0.1.7"]
 build-backend = "xmake_python"
 
 [project]
@@ -87,3 +87,7 @@ before-all = "brew install uv"
 [[tool.cibuildwheel.overrides]]
 select = ["*-musllinux_s390x", "*-musllinux_ppc64*"]
 build-frontend = "build"
+
+[[tool.cibuildwheel.overrides]]
+select = ["*-musllinux_*"]
+before-all = "apk add gzip"
