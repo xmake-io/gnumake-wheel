@@ -1,4 +1,4 @@
-.PHONY: install clean
+.PHONY: install
 ifeq ($(OS),Windows_NT)
   EXE=make-$(project_version)/GccRel/gnumake.exe
 else
