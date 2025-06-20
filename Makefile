@@ -16,11 +16,10 @@ install: make-$(project_version)/src/gnumake.h $(EXE)
 ifeq ($(OS),Windows_NT)
 	install -Dm644 $< -t $(includedir)
 	install -D $(EXE) $(bindir)/make.exe
-	rm $(EXE)
 else
 	DESTDIR=$(prefix) $(MAKE) -C make-$(project_version) install
-	rm make-$(project_version)/configure
 endif
+	rm -rf make-$(project_version)/src/config.h
 
 make-$(project_version)/src/config.h: make-$(project_version)/configure
 ifeq ($(OS),Windows_NT)
